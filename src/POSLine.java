@@ -13,11 +13,15 @@ public class POSLine {
         return this.line[n];
     }
     void joinLine(Cart newCart){
-        line[numOfCarts] = newCart;
-        this.numOfCarts++;
-        if (this.numOfCarts == 20) {
-            System.out.println("No room for any more in the line!");
-            return;
+        boolean placed = false;
+        for(int i = 0; i < this.numOfCarts; i++){
+            if(this.line[i] == null){
+                this.line[i] = newCart;
+                placed = true;
+            }
+        }
+        if(!placed){
+            System.out.println(this.id + " can't be placed");
         }
     }
     public void checkoutCart(){
