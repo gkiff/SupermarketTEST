@@ -12,17 +12,15 @@ public class POSLine {
     public Cart getLine(int n){
         return this.line[n];
     }
-    void joinLine(Cart newCart){
+    boolean joinLine(Cart newCart){
         boolean placed = false;
-        for(int i = 0; i < this.numOfCarts; i++){
+        for(int i = 0; i < 20; i++){
             if(this.line[i] == null){
                 this.line[i] = newCart;
-                placed = true;
+                return true;
             }
         }
-        if(!placed){
-            System.out.println(this.id + " can't be placed");
-        }
+        return false;
     }
     public void checkoutCart(){
         line[0] = null;
