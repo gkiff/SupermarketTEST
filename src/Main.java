@@ -3,7 +3,11 @@ public class Main {
         System.out.println("Hello, Supermarket POS Line!");
         POSLine pl = new POSLine("ID1", true);
         Cart c1 = new Cart(1);
-        pl.joinLine(c1);
+        if(pl.joinLine(c1)){
+            System.out.println("Cart joined!");
+        }else{
+            System.out.println("Cart not joined!");
+        }
         Cart c2 = new Cart(4);
         pl.joinLine(c2);
         Cart c3 = new Cart(99);

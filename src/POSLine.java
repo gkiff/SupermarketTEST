@@ -13,7 +13,6 @@ public class POSLine {
         return this.line[n];
     }
     boolean joinLine(Cart newCart){
-        boolean placed = false;
         for(int i = 0; i < 20; i++){
             if(this.line[i] == null){
                 this.line[i] = newCart;
