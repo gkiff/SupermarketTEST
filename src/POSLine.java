@@ -31,14 +31,13 @@ public class POSLine {
             }
         }
     }
-    public Cart leaveLine(int ID){
-        for(int i = 0; i < this.numOfCarts; i++)
-            if (this.line[i].getID() == ID) {
-                Cart leavingCart = this.line[i];
-                this.line[i] = null;
-                return leavingCart;
-            }
-        return null;
+    public Cart leaveLine(int n){// given in the stem
+        Cart result = this.line[n];
+        for (int i = n; i < 19; i++){
+            this.line[i] = this.line[i + 1];
+        }
+        this.line[19] = null;
+        return result;
     }
     public int getNumOfCarts(){
         return this.numOfCarts;
