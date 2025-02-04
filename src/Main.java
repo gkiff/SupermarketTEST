@@ -15,7 +15,7 @@ public class Main {
         Cart c4 = new Cart(42);
         pl.joinLine(c4);
 
-        pl.leaveLine(4);
+        pl.leaveLine(1);
         // pl.printCart();
         System.out.println(pl.getNumOfCarts());
         // Hello World
