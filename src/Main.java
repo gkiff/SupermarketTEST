@@ -12,8 +12,13 @@ public class Main {
         pl.joinLine(c4);
 
         pl.leaveLine(4);
-        pl.printCart();
+        // pl.printCart();
         System.out.println(pl.getNumOfCarts());
         // Hello World
+        for(Cart c : pl.line){
+            if(c != null) {
+                System.out.println(c.getID());
+            }
+        }
     }
 }

@@ -45,4 +45,7 @@ public class POSLine {
     public String getId(){
         return this.id;
     }
+    public String getID(){
+        return this.id;
+    }
 }
